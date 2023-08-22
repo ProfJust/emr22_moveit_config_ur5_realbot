@@ -23,9 +23,9 @@ joint_state_controller:
   type: joint_state_controller/JointStateController
   publish_rate: 50
 controller_list:
-  - name: /ur5_arm_controller    #/ ist wichtig!!!!
+  - name: ur5_arm_controller    #/ ist wichtig!!!!??
     action_ns: follow_joint_trajectory
-    default: True
+    default: true  #was True
     type: FollowJointTrajectory
     joints:
       - shoulder_pan_joint
@@ -34,9 +34,9 @@ controller_list:
       - wrist_1_joint
       - wrist_2_joint
       - wrist_3_joint
-  - name: /gripper_controller
+  - name: gripper_controller
     action_ns: follow_joint_trajectory
-    default: True
+    default: true  #was True
     type: FollowJointTrajectory
     joints:
       - robotiq_85_left_knuckle_joint
